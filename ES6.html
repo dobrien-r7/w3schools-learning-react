@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+<script>
+class Car {
+  constructor(name) {
+    this.brand = name;
+  }
+
+  present() {
+    return 'I have a ' + this.brand;
+  }
+}
+
+class Model extends Car {
+  constructor(name, mod) {
+    super(name);
+    this.model = mod;
+  }  
+  show() {
+      return this.present() + ', it is a ' + this.model
+  }
+}
+
+const mycar = new Car("Ford");
+mycar.present();
+
+const mycar2 = new Model("Ford", "Mustang");
+mycar2.show();
+
+document.write(mycar.brand);
+document.write("<hr/>");
+document.write(mycar2.show());
+</script>
+
+
+<h1>Function</h1>
+
+<p>This demonstrates a regular function, NOT an arrow function.</p>
+
+<p id="demo"></p>
+  
+<script>
+hello = function() {
+  return "Hello World!";
+}
+
+document.getElementById("demo").innerHTML = hello();
+</script>
+
+<hr/>
+<h1>Arrow Function</h1>
+
+<p>A demonstration of a simple arrow function.</p>
+
+<p id="demo1"></p>
+  
+<script>
+hello1 = () => {
+  return "Hello World!";
+}
+
+document.getElementById("demo1").innerHTML = hello1();
+</script>
+
+<hr/>
+
+<h2>Implicit Return</h2>
+
+<p>The arrow function expects a return value, and returns the value by default, without the <strong>return</strong> keyword.</p>
+
+<p id="demo2"></p>
+  
+<script>
+hello2 = () => "Hello World!";
+
+document.getElementById("demo2").innerHTML = hello2();
+</script>
+
+</body>
+</html>

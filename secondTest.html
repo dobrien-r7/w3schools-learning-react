@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+    <div id="div2"></div>
+    <div id="diva"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World! This is html with react inserted directly... </h1>;
+      }
+
+      function Hello2() {
+        return <h1>a different sentence</h1>;
+      }
+
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+      ReactDOM.render(<Hello2 />, document.getElementById('div2'))
+      ReactDOM.render(<Hello />, document.getElementById('diva'))
+    </script>
+
+  </body>
+</html>
